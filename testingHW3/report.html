@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отчет о тестировании</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+<h1>Отчет о тестировании</h1>
+<h2>Результаты тестов</h2>
+<table>
+    <tr>
+        <th>Тест</th>
+        <th>Описание</th>
+        <th>Результат</th>
+        <th>Ожидаемый результат</th>
+        <th>Примечание</th>
+    </tr>
+    <tr>
+        <td>testSqrtOfPositiveNumber</td>
+        <td>Вычисление квадратного корня из положительного числа</td>
+        <td>Пройден</td>
+        <td>5.0</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>testSqrtOfZero</td>
+        <td>Вычисление квадратного корня из нуля</td>
+        <td>Пройден</td>
+        <td>0.0</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>testSqrtOfOne</td>
+        <td>Вычисление квадратного корня из единицы</td>
+        <td>Пройден</td>
+        <td>1.0</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>testSqrtOfNegativeNumber</td>
+        <td>Проверка вычисления корня из отрицательного числа</td>
+        <td>Пройден</td>
+        <td>NaN</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>testSqrtOfNaN</td>
+        <td>Проверка вычисления корня из NaN</td>
+        <td>Пройден</td>
+        <td>NaN</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>testSqrtOfPositiveInfinity</td>
+        <td>Проверка вычисления корня из положительной бесконечности</td>
+        <td>Пройден</td>
+        <td>Infinity</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>testSqrtOfNegativeInfinity</td>
+        <td>Проверка вычисления корня из отрицательной бесконечности</td>
+        <td>Пройден</td>
+        <td>NaN</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>testSqrtOfDenormalizedNumber</td>
+        <td>Проверка вычисления корня из денормализованного числа</td>
+        <td>Пройден</td>
+        <td>1.0e-150</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>testSqrtOfNumberNearBorderOfNormalizedAndDenormalized</td>
+        <td>Проверка вычисления корня из числа, близкого к границе</td>
+        <td>Не пройден</td>
+        <td>4.47213595499958e-154</td>
+        <td>Необходимо пересмотреть алгоритм вычисления для корректной обработки граничных значений</td>
+    </tr>
+    <tr>
+        <td>testSqrtOfDifferentNaN</td>
+        <td>Проверка вычисления корня из различных NaN</td>
+        <td>Пройден</td>
+        <td>NaN</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>testRoundingOfResult</td>
+        <td>Проверка округления результата</td>
+        <td>Пройден</td>
+        <td>2.82842712474619</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>testSqrtOfExtremeValues</td>
+        <td>Проверка вычисления корня из экстремальных значений</td>
+        <td>Не пройден</td>
+        <td>0.0 (для минимального значения), Конечное число (для максимального значения)</td>
+        <td>Необходимо пересмотреть алгоритм вычисления для корректной обработки экстремальных значений</td>
+    </tr>
+</table>
+</body>
+</html>
