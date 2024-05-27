@@ -1,0 +1,14 @@
+plugins {
+    id 'java'
+}
+
+group = 'ru.hse'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.code-intelligence:jazzer:0.22.1'
+}
